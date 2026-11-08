@@ -1,0 +1,281 @@
+Model,Fold,Variable,Feature,ROC_AUC_Drop
+Gradient Boosting,1,ADDEPEV3,Depression History,0.031730228848598906
+Gradient Boosting,1,BPHIGH6,High Blood Pressure,-8.792505227714909e-05
+Gradient Boosting,1,CVDINFR4,Heart Attack History,0.0005810768267181076
+Gradient Boosting,1,CVDSTRK3,Stroke History,0.004603770583615297
+Gradient Boosting,1,DIABETE4,Diabetes,0.0012178806125458408
+Gradient Boosting,1,DRNKWK3_clean,Drinks per Week,-0.00016206859603369318
+Gradient Boosting,1,EXERANY2,Physical Activity,0.0014949733284286947
+Gradient Boosting,1,SEXVAR,Sex,0.00026499026258430813
+Gradient Boosting,1,TOLDHI3,High Cholesterol,0.00316491746670331
+Gradient Boosting,1,_AGE80,Age,0.02917801188815272
+Gradient Boosting,1,_SMOKER3,Smoking Status,0.001794967473828235
+Gradient Boosting,1,bmi,BMI,0.0006323587080553361
+Gradient Boosting,1,mhealth,Poor Mental Health Days,0.09348681223633584
+Gradient Boosting,1,sleep_hours,Sleep Duration,0.008500168457842915
+Gradient Boosting,2,ADDEPEV3,Depression History,0.029857092517047445
+Gradient Boosting,2,BPHIGH6,High Blood Pressure,0.00014887917540722383
+Gradient Boosting,2,CVDINFR4,Heart Attack History,0.000585252371941758
+Gradient Boosting,2,CVDSTRK3,Stroke History,0.0033460079909773733
+Gradient Boosting,2,DIABETE4,Diabetes,0.0008764845002215526
+Gradient Boosting,2,DRNKWK3_clean,Drinks per Week,0.00012151057528639875
+Gradient Boosting,2,EXERANY2,Physical Activity,0.0016318030733339262
+Gradient Boosting,2,SEXVAR,Sex,0.0010011234205006714
+Gradient Boosting,2,TOLDHI3,High Cholesterol,0.0017380519203642475
+Gradient Boosting,2,_AGE80,Age,0.030856033165759265
+Gradient Boosting,2,_SMOKER3,Smoking Status,0.0020494503855752466
+Gradient Boosting,2,bmi,BMI,0.0019178478046905755
+Gradient Boosting,2,mhealth,Poor Mental Health Days,0.09840737635470494
+Gradient Boosting,2,sleep_hours,Sleep Duration,0.008464378070213297
+Gradient Boosting,3,ADDEPEV3,Depression History,0.03182228967900225
+Gradient Boosting,3,BPHIGH6,High Blood Pressure,4.4172408041398545e-05
+Gradient Boosting,3,CVDINFR4,Heart Attack History,0.0007966100758778794
+Gradient Boosting,3,CVDSTRK3,Stroke History,0.004821468930298267
+Gradient Boosting,3,DIABETE4,Diabetes,0.0012632151035436134
+Gradient Boosting,3,DRNKWK3_clean,Drinks per Week,-6.642872686737355e-05
+Gradient Boosting,3,EXERANY2,Physical Activity,0.0013597475231174494
+Gradient Boosting,3,SEXVAR,Sex,0.00017572638469587343
+Gradient Boosting,3,TOLDHI3,High Cholesterol,0.0027002035854456928
+Gradient Boosting,3,_AGE80,Age,0.027409268605754544
+Gradient Boosting,3,_SMOKER3,Smoking Status,0.0016633869857755723
+Gradient Boosting,3,bmi,BMI,0.0005176041207549886
+Gradient Boosting,3,mhealth,Poor Mental Health Days,0.09317030590839656
+Gradient Boosting,3,sleep_hours,Sleep Duration,0.006247848434336278
+Gradient Boosting,4,ADDEPEV3,Depression History,0.031048409876030258
+Gradient Boosting,4,BPHIGH6,High Blood Pressure,0.0004668415666738257
+Gradient Boosting,4,CVDINFR4,Heart Attack History,4.0318356323054696e-05
+Gradient Boosting,4,CVDSTRK3,Stroke History,0.003773269473465524
+Gradient Boosting,4,DIABETE4,Diabetes,0.0005993603698980943
+Gradient Boosting,4,DRNKWK3_clean,Drinks per Week,0.0002297187086280017
+Gradient Boosting,4,EXERANY2,Physical Activity,0.000936529863034341
+Gradient Boosting,4,SEXVAR,Sex,0.0007274941485118092
+Gradient Boosting,4,TOLDHI3,High Cholesterol,0.0023201288985057245
+Gradient Boosting,4,_AGE80,Age,0.02512288456820555
+Gradient Boosting,4,_SMOKER3,Smoking Status,0.0019143947715654086
+Gradient Boosting,4,bmi,BMI,9.732367625965299e-05
+Gradient Boosting,4,mhealth,Poor Mental Health Days,0.0874828146376719
+Gradient Boosting,4,sleep_hours,Sleep Duration,0.007635667224372278
+Gradient Boosting,5,ADDEPEV3,Depression History,0.030400809815028795
+Gradient Boosting,5,BPHIGH6,High Blood Pressure,0.00025692177460874267
+Gradient Boosting,5,CVDINFR4,Heart Attack History,0.0005068283939183126
+Gradient Boosting,5,CVDSTRK3,Stroke History,0.004132399452755941
+Gradient Boosting,5,DIABETE4,Diabetes,0.0005909527924693236
+Gradient Boosting,5,DRNKWK3_clean,Drinks per Week,0.0005470937055888526
+Gradient Boosting,5,EXERANY2,Physical Activity,0.0015296044416054587
+Gradient Boosting,5,SEXVAR,Sex,0.0007385672197307791
+Gradient Boosting,5,TOLDHI3,High Cholesterol,0.0023754456303361816
+Gradient Boosting,5,_AGE80,Age,0.033361519198848846
+Gradient Boosting,5,_SMOKER3,Smoking Status,0.0025145066073744005
+Gradient Boosting,5,bmi,BMI,0.0004811194189841217
+Gradient Boosting,5,mhealth,Poor Mental Health Days,0.0928653925635817
+Gradient Boosting,5,sleep_hours,Sleep Duration,0.008561124016187405
+Original Logistic Regression,1,ADDEPEV3,Depression History,0.051646479341545225
+Original Logistic Regression,1,BPHIGH6,High Blood Pressure,-0.0006443904642918996
+Original Logistic Regression,1,CVDINFR4,Heart Attack History,0.0008306330369580062
+Original Logistic Regression,1,CVDSTRK3,Stroke History,0.006128379236714765
+Original Logistic Regression,1,DIABETE4,Diabetes,0.002372668515836729
+Original Logistic Regression,1,DRNKWK3_clean,Drinks per Week,0.00017460406883680336
+Original Logistic Regression,1,EXERANY2,Physical Activity,0.002283709519028032
+Original Logistic Regression,1,SEXVAR,Sex,-9.567079913079813e-05
+Original Logistic Regression,1,TOLDHI3,High Cholesterol,0.004251456193780645
+Original Logistic Regression,1,_AGE80,Age,0.02556467621297933
+Original Logistic Regression,1,_SMOKER3,Smoking Status,0.001989083931772928
+Original Logistic Regression,1,bmi,BMI,0.0012468001294640319
+Original Logistic Regression,1,mhealth,Poor Mental Health Days,0.06949305567062243
+Original Logistic Regression,1,sleep_hours,Sleep Duration,0.0015356506504682343
+Original Logistic Regression,2,ADDEPEV3,Depression History,0.04686168893071794
+Original Logistic Regression,2,BPHIGH6,High Blood Pressure,0.00014309969058985407
+Original Logistic Regression,2,CVDINFR4,Heart Attack History,0.0010798092504895828
+Original Logistic Regression,2,CVDSTRK3,Stroke History,0.003498704807731556
+Original Logistic Regression,2,DIABETE4,Diabetes,0.0009493820082604687
+Original Logistic Regression,2,DRNKWK3_clean,Drinks per Week,-0.000531164700956932
+Original Logistic Regression,2,EXERANY2,Physical Activity,0.002700777999074244
+Original Logistic Regression,2,SEXVAR,Sex,-8.080232328222525e-05
+Original Logistic Regression,2,TOLDHI3,High Cholesterol,0.00296732359702232
+Original Logistic Regression,2,_AGE80,Age,0.025406045261584652
+Original Logistic Regression,2,_SMOKER3,Smoking Status,0.003251428577740789
+Original Logistic Regression,2,bmi,BMI,0.0021169528240714496
+Original Logistic Regression,2,mhealth,Poor Mental Health Days,0.07129630353783556
+Original Logistic Regression,2,sleep_hours,Sleep Duration,0.001579089576491377
+Original Logistic Regression,3,ADDEPEV3,Depression History,0.049589857622744996
+Original Logistic Regression,3,BPHIGH6,High Blood Pressure,7.452795903106768e-05
+Original Logistic Regression,3,CVDINFR4,Heart Attack History,0.0015389159710185619
+Original Logistic Regression,3,CVDSTRK3,Stroke History,0.004970272990076996
+Original Logistic Regression,3,DIABETE4,Diabetes,0.0016555926346917271
+Original Logistic Regression,3,DRNKWK3_clean,Drinks per Week,0.000454904663907274
+Original Logistic Regression,3,EXERANY2,Physical Activity,0.0020396411682247926
+Original Logistic Regression,3,SEXVAR,Sex,-2.0678890630732027e-06
+Original Logistic Regression,3,TOLDHI3,High Cholesterol,0.003412922760145776
+Original Logistic Regression,3,_AGE80,Age,0.02300337909863457
+Original Logistic Regression,3,_SMOKER3,Smoking Status,0.002219295658427112
+Original Logistic Regression,3,bmi,BMI,0.0016883872343198992
+Original Logistic Regression,3,mhealth,Poor Mental Health Days,0.06687874459692182
+Original Logistic Regression,3,sleep_hours,Sleep Duration,0.0017216634576828539
+Original Logistic Regression,4,ADDEPEV3,Depression History,0.04920879038300437
+Original Logistic Regression,4,BPHIGH6,High Blood Pressure,8.621082155100269e-05
+Original Logistic Regression,4,CVDINFR4,Heart Attack History,0.0005445564030419625
+Original Logistic Regression,4,CVDSTRK3,Stroke History,0.004162210547487
+Original Logistic Regression,4,DIABETE4,Diabetes,0.0008662589595732184
+Original Logistic Regression,4,DRNKWK3_clean,Drinks per Week,0.0005667202270309701
+Original Logistic Regression,4,EXERANY2,Physical Activity,0.0011921034193907998
+Original Logistic Regression,4,SEXVAR,Sex,8.35232258219909e-05
+Original Logistic Regression,4,TOLDHI3,High Cholesterol,0.0016802468344496945
+Original Logistic Regression,4,_AGE80,Age,0.021842377814958014
+Original Logistic Regression,4,_SMOKER3,Smoking Status,0.0025175213117941244
+Original Logistic Regression,4,bmi,BMI,0.0006533775077411042
+Original Logistic Regression,4,mhealth,Poor Mental Health Days,0.06444158347128615
+Original Logistic Regression,4,sleep_hours,Sleep Duration,0.002351226326060929
+Original Logistic Regression,5,ADDEPEV3,Depression History,0.04734469520321614
+Original Logistic Regression,5,BPHIGH6,High Blood Pressure,0.0001823763562301517
+Original Logistic Regression,5,CVDINFR4,Heart Attack History,0.0012679572725322608
+Original Logistic Regression,5,CVDSTRK3,Stroke History,0.004025337662366346
+Original Logistic Regression,5,DIABETE4,Diabetes,0.000603334298451208
+Original Logistic Regression,5,DRNKWK3_clean,Drinks per Week,0.0006628238762820926
+Original Logistic Regression,5,EXERANY2,Physical Activity,0.0027351546804169845
+Original Logistic Regression,5,SEXVAR,Sex,5.410112520958244e-05
+Original Logistic Regression,5,TOLDHI3,High Cholesterol,0.00344799082327496
+Original Logistic Regression,5,_AGE80,Age,0.0286913928420661
+Original Logistic Regression,5,_SMOKER3,Smoking Status,0.0037276908557648757
+Original Logistic Regression,5,bmi,BMI,0.00047896669016831426
+Original Logistic Regression,5,mhealth,Poor Mental Health Days,0.06716052858996255
+Original Logistic Regression,5,sleep_hours,Sleep Duration,0.0017588943726253303
+Random Forest,1,ADDEPEV3,Depression History,0.04836663496345297
+Random Forest,1,BPHIGH6,High Blood Pressure,-0.0007603115531149785
+Random Forest,1,CVDINFR4,Heart Attack History,0.0005320263213999477
+Random Forest,1,CVDSTRK3,Stroke History,0.006758007270750976
+Random Forest,1,DIABETE4,Diabetes,0.0010024136418818274
+Random Forest,1,DRNKWK3_clean,Drinks per Week,0.0006036468637568238
+Random Forest,1,EXERANY2,Physical Activity,0.003655365078523509
+Random Forest,1,SEXVAR,Sex,0.0003953158777869392
+Random Forest,1,TOLDHI3,High Cholesterol,0.0037137829445547553
+Random Forest,1,_AGE80,Age,0.020624612961201726
+Random Forest,1,_SMOKER3,Smoking Status,0.0019575397864286083
+Random Forest,1,bmi,BMI,0.00021948786606440507
+Random Forest,1,mhealth,Poor Mental Health Days,0.07038539398699399
+Random Forest,1,sleep_hours,Sleep Duration,0.0061859487380022445
+Random Forest,2,ADDEPEV3,Depression History,0.04603775002181669
+Random Forest,2,BPHIGH6,High Blood Pressure,0.0009363295631915847
+Random Forest,2,CVDINFR4,Heart Attack History,0.0008639887945157243
+Random Forest,2,CVDSTRK3,Stroke History,0.0037918369195523603
+Random Forest,2,DIABETE4,Diabetes,0.0009498238648979473
+Random Forest,2,DRNKWK3_clean,Drinks per Week,0.0001790800765738121
+Random Forest,2,EXERANY2,Physical Activity,0.0024466220612391343
+Random Forest,2,SEXVAR,Sex,0.0003099138269093249
+Random Forest,2,TOLDHI3,High Cholesterol,0.00200408496461284
+Random Forest,2,_AGE80,Age,0.022102093185355564
+Random Forest,2,_SMOKER3,Smoking Status,0.001997006421281644
+Random Forest,2,bmi,BMI,0.0008260730764599877
+Random Forest,2,mhealth,Poor Mental Health Days,0.07709777514136654
+Random Forest,2,sleep_hours,Sleep Duration,0.005567066657387732
+Random Forest,3,ADDEPEV3,Depression History,0.049650148960918905
+Random Forest,3,BPHIGH6,High Blood Pressure,0.0004138606008588175
+Random Forest,3,CVDINFR4,Heart Attack History,0.0014756155891441302
+Random Forest,3,CVDSTRK3,Stroke History,0.0057461423153951415
+Random Forest,3,DIABETE4,Diabetes,0.0011187235645459647
+Random Forest,3,DRNKWK3_clean,Drinks per Week,0.0002897651642436827
+Random Forest,3,EXERANY2,Physical Activity,0.002921785851971448
+Random Forest,3,SEXVAR,Sex,6.57261748140181e-05
+Random Forest,3,TOLDHI3,High Cholesterol,0.0033396496739651173
+Random Forest,3,_AGE80,Age,0.020305314099313975
+Random Forest,3,_SMOKER3,Smoking Status,0.0025448688845661318
+Random Forest,3,bmi,BMI,0.0005864807333937572
+Random Forest,3,mhealth,Poor Mental Health Days,0.07527481163099237
+Random Forest,3,sleep_hours,Sleep Duration,0.004848541486472113
+Random Forest,4,ADDEPEV3,Depression History,0.04728768546289204
+Random Forest,4,BPHIGH6,High Blood Pressure,0.0007208282038418279
+Random Forest,4,CVDINFR4,Heart Attack History,0.0007177604547695448
+Random Forest,4,CVDSTRK3,Stroke History,0.003931258550687611
+Random Forest,4,DIABETE4,Diabetes,0.00044855000232078
+Random Forest,4,DRNKWK3_clean,Drinks per Week,-0.00015170328589506621
+Random Forest,4,EXERANY2,Physical Activity,0.0020862859681423764
+Random Forest,4,SEXVAR,Sex,4.736887472405194e-05
+Random Forest,4,TOLDHI3,High Cholesterol,0.002837597165647443
+Random Forest,4,_AGE80,Age,0.01816194974461216
+Random Forest,4,_SMOKER3,Smoking Status,0.002028988902616713
+Random Forest,4,bmi,BMI,0.00038170489933677667
+Random Forest,4,mhealth,Poor Mental Health Days,0.06710396530879728
+Random Forest,4,sleep_hours,Sleep Duration,0.0043759053506583715
+Random Forest,5,ADDEPEV3,Depression History,0.0473786305196829
+Random Forest,5,BPHIGH6,High Blood Pressure,0.00035896642494519514
+Random Forest,5,CVDINFR4,Heart Attack History,0.0012402900658417203
+Random Forest,5,CVDSTRK3,Stroke History,0.004909821880477172
+Random Forest,5,DIABETE4,Diabetes,-6.536869348807705e-05
+Random Forest,5,DRNKWK3_clean,Drinks per Week,-0.00010622633711199203
+Random Forest,5,EXERANY2,Physical Activity,0.0022693519048556433
+Random Forest,5,SEXVAR,Sex,0.0001472652166322197
+Random Forest,5,TOLDHI3,High Cholesterol,0.0026273856279934948
+Random Forest,5,_AGE80,Age,0.022954136267292015
+Random Forest,5,_SMOKER3,Smoking Status,0.002089623360865045
+Random Forest,5,bmi,BMI,0.0004527228483210743
+Random Forest,5,mhealth,Poor Mental Health Days,0.07346333840941195
+Random Forest,5,sleep_hours,Sleep Duration,0.004877774069563645
+Spline Logistic Regression,1,ADDEPEV3,Depression History,0.03210766720683631
+Spline Logistic Regression,1,BPHIGH6,High Blood Pressure,-0.0003076780323241213
+Spline Logistic Regression,1,CVDINFR4,Heart Attack History,0.0007700633291024328
+Spline Logistic Regression,1,CVDSTRK3,Stroke History,0.004174206397863078
+Spline Logistic Regression,1,DIABETE4,Diabetes,0.0018195523771333821
+Spline Logistic Regression,1,DRNKWK3_clean,Drinks per Week,0.00016991155134749025
+Spline Logistic Regression,1,EXERANY2,Physical Activity,0.001553859562495541
+Spline Logistic Regression,1,SEXVAR,Sex,0.0005203657247387472
+Spline Logistic Regression,1,TOLDHI3,High Cholesterol,0.0035352242588130743
+Spline Logistic Regression,1,_AGE80,Age,0.027600928340795083
+Spline Logistic Regression,1,_SMOKER3,Smoking Status,0.0019564925861978557
+Spline Logistic Regression,1,bmi,BMI,0.0008979454771001816
+Spline Logistic Regression,1,mhealth,Poor Mental Health Days,0.0933460853158887
+Spline Logistic Regression,1,sleep_hours,Sleep Duration,0.008042219401703932
+Spline Logistic Regression,2,ADDEPEV3,Depression History,0.03081786558942017
+Spline Logistic Regression,2,BPHIGH6,High Blood Pressure,0.00016362834996370702
+Spline Logistic Regression,2,CVDINFR4,Heart Attack History,0.0005369618600397086
+Spline Logistic Regression,2,CVDSTRK3,Stroke History,0.002898230474631358
+Spline Logistic Regression,2,DIABETE4,Diabetes,0.0006150202536036487
+Spline Logistic Regression,2,DRNKWK3_clean,Drinks per Week,-0.0006286206009029405
+Spline Logistic Regression,2,EXERANY2,Physical Activity,0.0012934646089403311
+Spline Logistic Regression,2,SEXVAR,Sex,8.354183443410878e-05
+Spline Logistic Regression,2,TOLDHI3,High Cholesterol,0.002043878573377511
+Spline Logistic Regression,2,_AGE80,Age,0.028972526458927738
+Spline Logistic Regression,2,_SMOKER3,Smoking Status,0.0019359064854612474
+Spline Logistic Regression,2,bmi,BMI,0.0012341762853333548
+Spline Logistic Regression,2,mhealth,Poor Mental Health Days,0.09280933996560145
+Spline Logistic Regression,2,sleep_hours,Sleep Duration,0.009985032106407976
+Spline Logistic Regression,3,ADDEPEV3,Depression History,0.032072106584658
+Spline Logistic Regression,3,BPHIGH6,High Blood Pressure,0.0005219343158014533
+Spline Logistic Regression,3,CVDINFR4,Heart Attack History,0.0009971997335603833
+Spline Logistic Regression,3,CVDSTRK3,Stroke History,0.0036738921273297585
+Spline Logistic Regression,3,DIABETE4,Diabetes,0.0014514725424762177
+Spline Logistic Regression,3,DRNKWK3_clean,Drinks per Week,0.0002411697712617622
+Spline Logistic Regression,3,EXERANY2,Physical Activity,0.0011441921811258028
+Spline Logistic Regression,3,SEXVAR,Sex,0.0005224601251999861
+Spline Logistic Regression,3,TOLDHI3,High Cholesterol,0.0029972858956046843
+Spline Logistic Regression,3,_AGE80,Age,0.025656887274639238
+Spline Logistic Regression,3,_SMOKER3,Smoking Status,0.0018978537918479255
+Spline Logistic Regression,3,bmi,BMI,0.001158459731947592
+Spline Logistic Regression,3,mhealth,Poor Mental Health Days,0.09247556146170588
+Spline Logistic Regression,3,sleep_hours,Sleep Duration,0.0074843135370512796
+Spline Logistic Regression,4,ADDEPEV3,Depression History,0.030441203317943
+Spline Logistic Regression,4,BPHIGH6,High Blood Pressure,1.557302591002063e-05
+Spline Logistic Regression,4,CVDINFR4,Heart Attack History,0.00020198519612155686
+Spline Logistic Regression,4,CVDSTRK3,Stroke History,0.003033199321912483
+Spline Logistic Regression,4,DIABETE4,Diabetes,0.0009494771786433098
+Spline Logistic Regression,4,DRNKWK3_clean,Drinks per Week,0.0003977288047934069
+Spline Logistic Regression,4,EXERANY2,Physical Activity,0.0007379881489405049
+Spline Logistic Regression,4,SEXVAR,Sex,0.0004282162188445016
+Spline Logistic Regression,4,TOLDHI3,High Cholesterol,0.0019754403258709584
+Spline Logistic Regression,4,_AGE80,Age,0.024040371400975546
+Spline Logistic Regression,4,_SMOKER3,Smoking Status,0.002102049070723955
+Spline Logistic Regression,4,bmi,BMI,0.0005326301969944769
+Spline Logistic Regression,4,mhealth,Poor Mental Health Days,0.08873034087819838
+Spline Logistic Regression,4,sleep_hours,Sleep Duration,0.0077939436267954855
+Spline Logistic Regression,5,ADDEPEV3,Depression History,0.031411036382000976
+Spline Logistic Regression,5,BPHIGH6,High Blood Pressure,0.00032395253387669244
+Spline Logistic Regression,5,CVDINFR4,Heart Attack History,0.0005954571675480747
+Spline Logistic Regression,5,CVDSTRK3,Stroke History,0.002957513443504101
+Spline Logistic Regression,5,DIABETE4,Diabetes,0.000558529248600359
+Spline Logistic Regression,5,DRNKWK3_clean,Drinks per Week,0.0008299322133543674
+Spline Logistic Regression,5,EXERANY2,Physical Activity,0.001236254251860358
+Spline Logistic Regression,5,SEXVAR,Sex,0.0003503466689063206
+Spline Logistic Regression,5,TOLDHI3,High Cholesterol,0.0031724150125206573
+Spline Logistic Regression,5,_AGE80,Age,0.03283287177118297
+Spline Logistic Regression,5,_SMOKER3,Smoking Status,0.002945043529767921
+Spline Logistic Regression,5,bmi,BMI,0.0002956797340694095
+Spline Logistic Regression,5,mhealth,Poor Mental Health Days,0.08791534515492352
+Spline Logistic Regression,5,sleep_hours,Sleep Duration,0.008012301939003019

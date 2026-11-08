@@ -1,0 +1,43 @@
+BRFSS COGNITIVE DECLINE — EDA KEY NUMBERS
+=======================================================
+
+Rows: 73,448
+Overall positive rate: 20.649%
+
+CONTINUOUS FEATURES — median/mean by class
+                        feature  median_No  median_Decline  mean_No  mean_Decline
+         Age (years, capped 80)      66.00           67.00    65.46         66.41
+              Sleep hours / 24h       7.00            7.00     7.15          7.00
+                Drinks per week       0.00            0.00     2.23          2.25
+                            BMI      27.46           28.06    28.61         29.11
+Poor mental-health days (of 30)       0.00            2.00     2.77          8.49
+
+CATEGORICAL FEATURES — decline-rate spread (signal strength)
+                 feature  rate_spread  max_rate  min_rate
+          General health        0.397     0.482     0.085
+     Depressive disorder        0.254     0.410     0.156
+      Stroke (ever told)        0.157     0.353     0.196
+Heart attack (ever told)        0.133     0.331     0.198
+          Smoking status        0.111     0.288     0.177
+ Any exercise (past 30d)        0.089     0.272     0.183
+                Diabetes        0.080     0.271     0.191
+        High cholesterol        0.068     0.240     0.172
+     High blood pressure        0.051     0.232     0.182
+                     Sex        0.020     0.215     0.196
+
+COLLINEARITY (Cramer's V) for flagged pairs
+                                  pair  cramers_v
+High blood pressure x High cholesterol      0.260
+        Diabetes x High blood pressure      0.136
+  General health x Depressive disorder      0.160
+
+MISSINGNESS (%)
+Felt lonely (freq)                 54.75
+Emotional support (freq)           54.72
+Life satisfaction                  54.67
+_BMI5                               5.45
+BMI                                 5.45
+Sleep hours / 24h                   4.51
+SLEPTIM1                            3.19
+Poor mental-health days (of 30)     1.63
+Drinks per week                     1.20

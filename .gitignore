@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+.conda/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# VS Code local settings
+.vscode/
+
+# Credentials and secrets
+.env
+.env.*
+!.env.example
+*credentials*.json
+*service-account*.json
+*.pem
+*.key
+
+# Temporary files
+*.tmp
+*.log
+~$*
+
+# Data
+data/*.csv
+
+# Historical spline experiments
+/src/retired/model_logistic_spline.py
+/src/experiment_logistic_spline_comparison.py
+/outputs/spline_experiment/
+
+# Old GenHealth experiment
+/src/ablation_genhlth.py
+
+# Retired scripts
+/src/retired/
+
+# Original BRFSS dataset - too large for GitHub
+/data/LLCP2025.XPT
+
+# Python cache
+__pycache__/
+*.pyc

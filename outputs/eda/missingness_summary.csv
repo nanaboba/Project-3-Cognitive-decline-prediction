@@ -1,0 +1,15 @@
+Variable,Missing_Count,Missing_Percentage
+Age,0,0.0
+Sex,0,0.0
+Diabetes,126,0.17154994009367172
+Physical Activity,177,0.24098682060777693
+Stroke History,249,0.33901535780416076
+Depression History,372,0.5064807755146499
+Heart Attack History,429,0.5840867007951204
+Smoking Status,461,0.6276549395490687
+High Blood Pressure,813,1.1069055658425009
+Drinks per Week,880,1.1981265657335802
+Poor Mental Health Days,1200,1.6338089532730642
+Sleep Duration,3316,4.5147587408779
+Body Mass Index,4002,5.448752859165668
+High Cholesterol,4622,6.292887485023418

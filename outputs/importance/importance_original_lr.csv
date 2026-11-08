@@ -1,0 +1,15 @@
+Model,Variable,Feature,importance_mean,importance_fold_sd
+Original Logistic Regression,mhealth,Poor Mental Health Days,0.0678540431733257,0.002627383174942659
+Original Logistic Regression,ADDEPEV3,Depression History,0.04893030229624573,0.0019159526151563547
+Original Logistic Regression,_AGE80,Age,0.024901574246044535,0.002646636914862284
+Original Logistic Regression,CVDSTRK3,Stroke History,0.0045569810488753325,0.001024516902637754
+Original Logistic Regression,TOLDHI3,High Cholesterol,0.0031519880417346787,0.0009440150859065786
+Original Logistic Regression,_SMOKER3,Smoking Status,0.002741004067099966,0.0007282843015433739
+Original Logistic Regression,EXERANY2,Physical Activity,0.0021902773572269702,0.0006295383711745616
+Original Logistic Regression,sleep_hours,Sleep Duration,0.0017893048766657448,0.0003277906399302964
+Original Logistic Regression,DIABETE4,Diabetes,0.0012894472833626703,0.0007198809682108347
+Original Logistic Regression,bmi,BMI,0.0012368968771529598,0.0006880031085593031
+Original Logistic Regression,CVDINFR4,Heart Attack History,0.0010523743868080747,0.00038438252314525526
+Original Logistic Regression,DRNKWK3_clean,Drinks per Week,0.0002655776270200416,0.00048151082554530783
+Original Logistic Regression,SEXVAR,Sex,-8.18333208890465e-06,7.945819624112992e-05
+Original Logistic Regression,BPHIGH6,High Blood Pressure,-3.16351273779647e-05,0.0003453116502660185
