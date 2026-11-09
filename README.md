@@ -125,7 +125,7 @@ Potentially modifiable factors for discussion include poor mental-health days, s
 
 ### 8. Opportunity sizing — illustrative $250,000 annual budget
 
-Assume S$5 outreach/administration plus $50 for a brief memory screen per participant: **$55 per person**. A $250,000 budget supports **4,545 people** ($249,975 spent). This assumes full attendance and excludes counselling, referral, diagnostics, model development and ongoing operating costs.
+Assume $5 outreach/administration plus $50 for a brief memory screen per participant: **$55 per person**. A $250,000 budget supports **4,545 people** ($249,975 spent). This assumes full attendance and excludes counselling, referral, diagnostics, model development and ongoing operating costs.
 
 Models rank the test respondents and select their **top 4,545**. **Precision@4,545** measures positive-case yield among those invited; **Recall@4,545** measures the fraction of all positive test respondents included in that selection.
 
