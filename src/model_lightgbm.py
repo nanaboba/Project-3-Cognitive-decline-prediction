@@ -12,6 +12,7 @@ import sys
 import pandas as pd
 
 from pathlib import Path
+from safe_save_results import safe_save_results
 
 from lightgbm import LGBMClassifier
 
@@ -36,6 +37,11 @@ from build_preprocessor import (
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent
 DATA_DIR = PROJECT_ROOT / "data"
+
+# Directory for hyperparameter tuning results
+TUNING_OUTPUT = PROJECT_ROOT / "outputs" / "tuning"
+TUNING_OUTPUT.mkdir(parents=True, exist_ok=True)
+
 
 
 # --------------------------------------------------
@@ -147,16 +153,14 @@ def main():
 
 
     # Save tuning results
-    grid_df = pd.DataFrame(search.cv_results_)
+    results_df = pd.DataFrame(search.cv_results_)
 
-    grid_df.to_csv(
-        "lightgbm_gridsearch_results.csv",
-        index=False
+    safe_save_results(
+        results_df,
+        TUNING_OUTPUT / "lightgbm_gridsearch_results.csv"
     )
 
-    print(
-        "\nSaved -> lightgbm_gridsearch_results.csv"
-    )
+    print("\nLightGBM grid-search results processed.")
 
 
 if __name__ == "__main__":

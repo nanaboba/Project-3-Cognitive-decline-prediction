@@ -41,6 +41,9 @@ data/*.csv
 /src/experiment_logistic_spline_comparison.py
 /outputs/spline_experiment/
 
+# Historical final-evaluation results
+/outputs/final_evaluation/archive/
+
 # Old GenHealth experiment
 /src/ablation_genhlth.py
 
@@ -49,6 +52,11 @@ data/*.csv
 
 # Original BRFSS dataset - too large for GitHub
 /data/LLCP2025.XPT
+
+/archive/
+
+# Future experimental reruns (keep local; do not publish automatically)
+/outputs/experiments/
 
 # Python cache
 __pycache__/

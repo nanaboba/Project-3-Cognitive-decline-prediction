@@ -7,18 +7,28 @@ from sklearn.pipeline import Pipeline
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import (
     StratifiedKFold, GridSearchCV, cross_validate
-)
+    )
 
+from safe_save_results import safe_save_results
 from build_preprocessor import build_preprocessor, FEATURES, TARGET
 
+
+
 SCRIPT_DIR = Path(__file__).resolve().parent
-DATA_DIR = SCRIPT_DIR.parent / "data"
+PROJECT_ROOT = SCRIPT_DIR.parent
+DATA_DIR = PROJECT_ROOT / "data"
+
+
+# Directory for hyperparameter tuning results
+TUNING_OUTPUT = PROJECT_ROOT / "outputs" / "tuning"
+TUNING_OUTPUT.mkdir(parents=True, exist_ok=True)
+
 
 CV = StratifiedKFold(
     n_splits=5,
     shuffle=True,
     random_state=42
-)
+    )
 
 SCORING = {
     "roc_auc": "roc_auc",
@@ -82,10 +92,15 @@ def main():
             f"{results['test_' + metric].mean():.3f}"
         )
 
-    pd.DataFrame(search.cv_results_).to_csv(
-        "logistic_gridsearch_results.csv",
-        index=False
+    results_df = pd.DataFrame(search.cv_results_)
+
+    safe_save_results(
+        results_df,
+        TUNING_OUTPUT / "logistic_gridsearch_results.csv"
     )
+
+    print("\nLogistic grid-search results processed.")
+    
 
 if __name__ == "__main__":
     main()

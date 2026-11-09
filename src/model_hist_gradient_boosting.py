@@ -9,6 +9,7 @@ Uses training data only.
 import sys
 import pandas as pd
 from pathlib import Path
+from safe_save_results import safe_save_results
 
 from sklearn.pipeline import Pipeline
 from sklearn.ensemble import HistGradientBoostingClassifier
@@ -21,7 +22,13 @@ from sklearn.model_selection import (
 from build_preprocessor import build_preprocessor, FEATURES, TARGET
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-DATA_DIR = SCRIPT_DIR.parent / "data"
+PROJECT_ROOT = SCRIPT_DIR.parent
+DATA_DIR = PROJECT_ROOT / "data"
+
+# Directory for hyperparameter tuning results
+TUNING_OUTPUT = PROJECT_ROOT / "outputs" / "tuning"
+TUNING_OUTPUT.mkdir(parents=True, exist_ok=True)
+
 
 CV = StratifiedKFold(
     n_splits=5,
@@ -96,10 +103,14 @@ def main():
             f"{results['test_' + metric].mean():.3f}"
         )
 
-    pd.DataFrame(search.cv_results_).to_csv(
-        "histgb_gridsearch_results.csv",
-        index=False
+    results_df = pd.DataFrame(search.cv_results_)
+
+    safe_save_results(
+        results_df,
+        TUNING_OUTPUT / "histgb_gridsearch_results.csv"
     )
+
+    print("\nHistGradientBoosting grid-search results processed.")    
 
 if __name__ == "__main__":
     main()

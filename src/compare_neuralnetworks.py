@@ -1,6 +1,12 @@
 import pandas as pd
+from pathlib import Path
 
-df = pd.read_csv("neural_network_gridsearch_results.csv")
+df = pd.read_csv(
+    Path(__file__).resolve().parent.parent
+    / "outputs"
+    / "tuning"
+    / "neural_network_gridsearch_results.csv"
+)
 
 comparison = df[[
     "param_clf__learning_rate_init",

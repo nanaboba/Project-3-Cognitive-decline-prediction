@@ -21,6 +21,7 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.model_selection import StratifiedKFold, GridSearchCV, cross_validate
 
 from build_preprocessor import build_preprocessor, FEATURES, TARGET
+from safe_save_results import safe_save_results
 
 from pathlib import Path
 
@@ -28,13 +29,16 @@ SCRIPT_DIR = Path(__file__).resolve().parent   # .../src
 PROJECT_ROOT = SCRIPT_DIR.parent               # project root
 DATA_DIR = PROJECT_ROOT / "data"               # .../data
 
+# Directory for hyperparameter tuning results
+TUNING_OUTPUT = PROJECT_ROOT / "outputs" / "tuning"
+TUNING_OUTPUT.mkdir(parents=True, exist_ok=True)
 
 
 CV = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 
 SCORING = {
     "roc_auc":   "roc_auc",
-    "pr_auc":    "average_precision",
+    "pr_auc": "average_precision",
     "recall":    "recall",
     "precision": "precision",
     "f1":        "f1",
@@ -87,12 +91,23 @@ def main():
 
     # --- Save full grid results for the appendix -------------------------
     grid_df = pd.DataFrame(search.cv_results_)
-    keep = ["param_clf__n_estimators", "param_clf__max_depth",
-            "param_clf__learning_rate", "mean_test_score", "rank_test_score"]
-    grid_df[keep].sort_values("rank_test_score").to_csv(
-        "gridsearch_results.csv", index=False)
-    print("\nSaved full grid -> gridsearch_results.csv")
 
+    keep = [
+        "param_clf__n_estimators",
+        "param_clf__max_depth",
+        "param_clf__learning_rate",
+        "mean_test_score",
+        "rank_test_score"
+    ]
+
+    results_df = grid_df[keep].sort_values("rank_test_score")
+
+    safe_save_results(
+        results_df,
+        TUNING_OUTPUT / "gb_gridsearch_results.csv"
+    )
+
+    print("\nGradient Boosting grid-search results processed.")
 
 if __name__ == "__main__":
     main()

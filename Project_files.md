@@ -58,12 +58,12 @@ The untuned MLP used scikit-learn's default 200 iterations and produced a conver
 
 | File | Purpose | Selected configuration | Main output |
 |---|---|---|---|
-| `src/model_gradient_boosting.py` | GridSearchCV over trees (100/200), depth (3/5), learning rate (0.05/0.1) | 200 trees, depth 3, LR 0.05 | `gridsearch_results.csv` (script-dependent working directory) |
-| `src/model_random_forest.py` | GridSearchCV over trees (200/300), depth (10/20), min. leaf (1/5) | 300 trees, depth 10, leaf 5 | `rf_gridsearch_results.csv` (script-dependent working directory) |
-| `src/model_neural_network.py` | MLP learning-rate sweep using fixed (32,16) architecture, alpha 0.01, early stopping | Initial LR 0.01 | `neural_network_gridsearch_results.csv`, `fig_neural_network_lr_sweep.png/.svg` (script-dependent working directory) |
+| `src/model_gradient_boosting.py` | GridSearchCV over trees (100/200), depth (3/5), learning rate (0.05/0.1) | 200 trees, depth 3, LR 0.05 | `outputs/tuning/gb_gridsearch_results.csv` |
+| `src/model_random_forest.py` | GridSearchCV over trees (200/300), depth (10/20), min. leaf (1/5) | 300 trees, depth 10, leaf 5 | `outputs/tuning/rf_gridsearch_results.csv` |
+| `src/model_neural_network.py` | MLP learning-rate sweep using fixed (32,16) architecture, alpha 0.01, early stopping | Initial LR 0.01 | `outputs/tuning/neural_network_gridsearch_results.csv`, `outputs/tuning/fig_neural_network_lr_sweep.png/.svg` |
 | `src/build_spline_model.py` | Defines fixed spline LR model used after `C` selection | `C=1`, four cubic spline knots | Reusable model builder; no standalone evaluation CSV |
 
-**Spline `C` search:** `{0.001, 0.01, 0.1, 1, 10}`. The historical comparison script and its `outputs/spline_experiment/` results may be excluded from the public repository while retained locally. Selected CV ROC-AUC: spline LR 0.7309; RF 0.7280; GB 0.7320; MLP 0.7260. The model-selection CV estimates may be optimistic.
+**Spline `C` search:** See the locally retained spline experiment for the exact candidate grid; the final selected value was `C=1`. The historical comparison script and its `outputs/spline_experiment/` results may be excluded from the public repository while retained locally. Selected CV ROC-AUC: spline LR 0.7309; RF 0.7280; GB 0.7320; MLP 0.7260. The model-selection CV estimates may be optimistic.
 
 Other historical scripts such as `model_baselines.py` document earlier baseline development; do not confuse their outputs with the consolidated untuned comparison.
 
@@ -72,7 +72,7 @@ Other historical scripts such as `model_baselines.py` document earlier baseline 
 | File | Purpose | Input | Outputs |
 |---|---|---|---|
 | `src/explore_recall_tradeoff.py` | Training-only exploration of recall/precision trade-offs | Training CSV | Threshold exploration results (check script for save paths) |
-| `src/final_test_evaluation.py` | Train-only out-of-fold threshold selection; fit final configurations on full training set; evaluate original LR, spline LR, RF, GB and MLP on test; create plots and subgroup error analysis | Train and test CSVs | `outputs/final_evaluation/all_final_model_results.csv`, `all_final_test_predictions.csv`, ROC/PR plots, confusion matrices, segment error CSV and recall plots |
+| `src/final_test_evaluation_unified.py` | Train-only out-of-fold threshold selection; fit final configurations on full training set; evaluate original LR, spline LR, RF, GB and MLP on test; create plots and subgroup error analysis | Train and test CSVs | `outputs/final_evaluation/all_final_model_results.csv`, `all_final_test_predictions.csv`, ROC/PR plots, confusion matrices, segment error CSV and recall plots |
 
 | Model | Test ROC-AUC | Test AP | Recall | Precision | F1 |
 |---|---:|---:|---:|---:|---:|
@@ -89,8 +89,8 @@ Other historical scripts such as `model_baselines.py` document earlier baseline 
 | File | Purpose | Input | Outputs |
 |---|---|---|---|
 | `src/feature_importance_grouped.py` | Five-fold held-out-training-fold permutation importance for original LR, spline LR, RF and GB; permutes original input columns | Training CSV | `outputs/importance/importance_all_models_summary.csv`, `importance_spline_lr.csv`, `fig_importance_spline_lr.png/.svg`, other model-specific files |
-| `src/association_spline_extension.py` | Spline-adjusted association analysis and effect curves | Cleaned/model data per script | `outputs/association_spline_adjusted_odds_ratios.csv`, `association_spline_effect_curves.csv/.png` and associated plots |
-| `src/final_test_evaluation.py` | Spline LR subgroup recall/precision by age, sex, depression history, stroke history and physical activity | Test predictions | `outputs/final_evaluation/spline_lr_segment_error_analysis.csv`, `fig_spline_lr_segment_recall.png/.svg` |
+| `src/association_spline_extension.py` | Spline-adjusted association analysis and effect curves | Cleaned/model data per script | `outputs/associations/association_spline_adjusted_odds_ratios.csv`, `association_spline_effect_curves.csv/.png` and associated plots |
+| `src/final_test_evaluation_unified.py` | Spline LR subgroup recall/precision by age, sex, depression history, stroke history and physical activity | Test predictions | `outputs/final_evaluation/spline_lr_segment_error_analysis.csv`, `fig_spline_lr_segment_recall.png/.svg` |
 
 **Spline LR subgroup recall:** no depression history 51.4%; physically active 63.1%; age 65–74 63.6%; overall 70.5%. These are **threshold-based test** results, not Recall@4,545.
 
@@ -132,7 +132,7 @@ The preferred model is spline LR for **interpretability with comparable predicti
 4. Use `src/build_preprocessor.py` and `src/build_spline_model.py` as shared pipeline components.
 5. Run `src/model_default_comparison.py` for the untuned CV benchmark.
 6. Run the retained tuning scripts on **training data only**.
-7. Run `src/final_test_evaluation.py` for consolidated evaluation (reproduces the existing exploratory test evaluation).
+7. Run `src/final_test_evaluation_unified.py` for consolidated evaluation (reproduces the existing exploratory test evaluation).
 8. Run `src/feature_importance_grouped.py` and the association extension for interpretation.
 9. Use the saved final predictions for `src/recalculate_outreach_250k.py`, if available.
 
@@ -145,3 +145,6 @@ The preferred model is spline LR for **interpretability with comparable predicti
 
 - [Back to Project Overview](README.md)
 - [Data Cleaning and Preparation](data_cleaning.md)
+## Tuning-result preservation
+
+`src/safe_save_results.py` is shared by the six tuning scripts. It keeps the original CSVs under `outputs/tuning/` unchanged when rerun results match. Different reruns are saved to `outputs/experiments/tuning_reruns/` and identical reruns are not duplicated. The neural-network sweep figures use the same protection. The experiments directory is excluded from Git by default.

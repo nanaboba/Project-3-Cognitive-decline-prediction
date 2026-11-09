@@ -10,6 +10,7 @@ import sys
 import pandas as pd
 import matplotlib.pyplot as plt
 from pathlib import Path
+from safe_save_results import safe_save_results
 
 from sklearn.pipeline import Pipeline
 from sklearn.neural_network import MLPClassifier
@@ -17,14 +18,19 @@ from sklearn.model_selection import (
     StratifiedKFold,
     GridSearchCV,
     cross_validate
-)
+    )
 
 from build_preprocessor import build_preprocessor, FEATURES, TARGET
 
 
 # File locations
 SCRIPT_DIR = Path(__file__).resolve().parent
-DATA_DIR = SCRIPT_DIR.parent / "data"
+PROJECT_ROOT = SCRIPT_DIR.parent
+DATA_DIR = PROJECT_ROOT / "data"
+
+# Directory for hyperparameter tuning results
+TUNING_OUTPUT = PROJECT_ROOT / "outputs" / "tuning"
+TUNING_OUTPUT.mkdir(parents=True, exist_ok=True)
 
 
 # Cross-validation
@@ -32,7 +38,7 @@ CV = StratifiedKFold(
     n_splits=5,
     shuffle=True,
     random_state=42
-)
+    )
 
 
 # Evaluation metrics
@@ -131,16 +137,9 @@ def main():
 
     plt.tight_layout()
 
-    plt.savefig(
-        "fig_neural_network_lr_sweep.png",
-        dpi=150,
-        bbox_inches="tight"
-    )
-
-    plt.savefig(
-        "fig_neural_network_lr_sweep.svg",
-        bbox_inches="tight"
-    )
+    from safe_save_results import safe_save_figure
+    safe_save_figure(fig, TUNING_OUTPUT / "fig_neural_network_lr_sweep.png", dpi=150, bbox_inches="tight")
+    safe_save_figure(fig, TUNING_OUTPUT / "fig_neural_network_lr_sweep.svg", bbox_inches="tight")
 
     plt.close()
 
@@ -172,12 +171,15 @@ def main():
         )
 
     # Save tuning results
-    pd.DataFrame(search.cv_results_).to_csv(
-        "neural_network_gridsearch_results.csv",
-        index=False
-    )
+    results_df = pd.DataFrame(search.cv_results_)
 
-    print("\nSaved -> neural_network_gridsearch_results.csv")
+    safe_save_results(
+        results_df,
+        TUNING_OUTPUT / "neural_network_gridsearch_results.csv"
+    )
+    
+   
+    print("\nNeural network grid-search results processed.")
 
 
 if __name__ == "__main__":

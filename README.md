@@ -82,7 +82,7 @@ Training-only cross-validation was used to select configurations. The reported t
 
 Random Forest showed the largest observed overall improvement in ROC-AUC (0.6931 → 0.7280). Because several parameters changed together, this does **not** isolate one parameter as the cause.
 
-**Files:** `src/model_random_forest.py`, `src/model_gradient_boosting.py`, `src/model_neural_network.py`, `src/build_spline_model.py`. Historical spline-comparison experiments were retained locally rather than included in the public portfolio.
+**Files:** `src/model_random_forest.py`, `src/model_gradient_boosting.py`, `src/model_neural_network.py`, `src/build_spline_model.py`, `src/safe_save_results.py`. Historical spline-comparison experiments were retained locally rather than included in the public portfolio.
 
 ### 6. Test-set evaluation
 
@@ -100,7 +100,7 @@ Selected models were fitted on the full training set and scored on the 14,690-ro
 
 Gradient Boosting has the highest AP; spline Logistic Regression has essentially the same ROC-AUC and offers easier explanation of the additive predictor relationships. The test set was revisited during exploratory development and consolidation, so these are not results from a wholly untouched, single-use external validation.
 
-**File:** `src/final_test_evaluation.py`.
+**File:** `src/final_test_evaluation_unified.py`.
 
 **Outputs:** `outputs/final_evaluation/all_final_model_results.csv`, `outputs/final_evaluation/all_final_test_predictions.csv`, ROC and precision–recall figures, confusion matrices and subgroup outputs.
 
@@ -119,9 +119,9 @@ Spline Logistic Regression's test-set subgroup recall showed potential coverage 
 
 Potentially modifiable factors for discussion include poor mental-health days, sleep, physical activity and smoking. Observational associations do not show that changing these factors will prevent cognitive decline.
 
-**Files:** `src/feature_importance_grouped.py`, `src/association_spline_extension.py`, `src/final_test_evaluation.py`.
+**Files:** `src/feature_importance_grouped.py`, `src/association_spline_extension.py`, `src/final_test_evaluation_unified.py`.
 
-**Selected figures:** `outputs/importance/fig_importance_spline_lr.png`, `outputs/association_spline_effect_curves.png`, `outputs/final_evaluation/fig_spline_lr_segment_recall.png`.
+**Selected figures:** `outputs/importance/fig_importance_spline_lr.png`, `outputs/associations/association_spline_effect_curves.png`, `outputs/final_evaluation/fig_spline_lr_segment_recall.png`.
 
 ### 8. Opportunity sizing — illustrative $250,000 annual budget
 
@@ -171,3 +171,6 @@ Data source: US Centers for Disease Control and Prevention, **Behavioral Risk Fa
 
 - [Project Scripts and Outputs](Project_files.md)
 - [Data Cleaning and Preparation](data_cleaning.md)
+## Preserving tuning results
+
+The six tuning scripts use `src/safe_save_results.py` to compare rerun results with the authoritative CSVs in `outputs/tuning/`. Matching reruns do not overwrite those CSVs; changed results are saved separately under `outputs/experiments/tuning_reruns/`, excluded from Git by default.
