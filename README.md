@@ -157,6 +157,10 @@ Spline LR yields approximately **1.92 times** the expected number of respondents
 - Reuse of the test set during exploratory work limits claims of independent validation.
 - Screening cost assumptions are illustrative; programme ROI has not been established.
 
+## Project Presentation
+
+[View Final Project Presentation (PDF)](presentation/Cognitive_Decline_Prediction.pdf)
+
 ## Repository guide and reproducibility
 
 - [Project scripts and output inventory](Project_files.md)
