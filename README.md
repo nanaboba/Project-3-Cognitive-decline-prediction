@@ -169,7 +169,7 @@ The inventory lists the scripts and generated outputs by stage. Use the document
 
 ## Data source and disclaimer
 
-Data source: US Centers for Disease Control and Prevention, **Behavioral Risk Factor Surveillance System (BRFSS)**. This is an educational data-science project, not a validated screening or diagnostic product.
+Data source: US Centers for Disease Control and Prevention, **Behavioral Risk Factor Surveillance System (BRFSS)**. 
 
 
 - [Project Scripts and Outputs](Project_files.md)
