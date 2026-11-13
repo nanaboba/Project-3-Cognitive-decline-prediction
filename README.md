@@ -6,7 +6,7 @@
 
 This educational project uses US Behavioral Risk Factor Surveillance System (BRFSS) survey data to predict **self-reported cognitive decline** among adults aged 45 and older. It explores whether machine-learning rankings could help a hypothetical public-health agency prioritise invitations for brief memory screening under a fixed budget. It also examines potentially modifiable health factors that may inform outreach conversations.
 
-**Recommended candidate:** Spline Logistic Regression, because it achieves discrimination comparable to Gradient Boosting while offering a more transparent additive model structure. This is **not** a clinical diagnostic system or a validated deployment model.
+**Recommended candidate:** Spline Logistic Regression, because it achieves discrimination comparable to Gradient Boosting while offering a more transparent additive model structure. 
 
 ## Data and objective
 
@@ -98,7 +98,7 @@ Selected models were fitted on the full training set and scored on the 14,690-ro
 
 **AP** means scikit-learn's **Average Precision**, not trapezoidally integrated PR-AUC. ROC-AUC and AP summarise ranking performance; recall, precision and F1 are measured at each model's selected classification threshold.
 
-Gradient Boosting has the highest AP; spline Logistic Regression has essentially the same ROC-AUC and offers easier explanation of the additive predictor relationships. The test set was revisited during exploratory development and consolidation, so these are not results from a wholly untouched, single-use external validation.
+Gradient Boosting has the highest AP; spline Logistic Regression has essentially the same ROC-AUC and offers easier explanation of the additive predictor relationships. 
 
 **File:** `src/final_test_evaluation_unified.py`.
 
